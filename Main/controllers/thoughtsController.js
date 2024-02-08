@@ -1,11 +1,11 @@
-const { Thoughts, User } = require("../models");
+const { Thought, User } = require("../models");
 
 module.exports = {
   //     GET to get all thoughts
   async getThoughts(req, res) {
     try {
-      const thoughts = await Thoughts.find().populate("users");
-      res.json(thoughts);
+      const thoughts = await Thought.find()
+      res.status(200).json(thoughts);
     } catch (err) {
       res.status(500).json(err.toString());
     }
@@ -15,12 +15,12 @@ module.exports = {
     try {
       const thought = await Thoughts.findOne({
         _id: req.params.thoughtId,
-      }).populate("users");
+      })
 
       if (!thought) {
         return res.status(404).json({ message: "No thought with that Id" });
       } else {
-        res.json(thought);
+        res.status(200).json(thought);
       }
     } catch (err) {
       res.status(500).json(err.toString());
@@ -35,7 +35,7 @@ module.exports = {
   // }
   async createThought(req, res) {
     try {
-      const thought = await Thoughts.create(req.body);
+      const thought = await Thought.create(req.body);
       res.json(thought);
     } catch (err) {
       console.log(err);
@@ -45,7 +45,7 @@ module.exports = {
   // PUT to update a thought by its _id
   async updateThought(req, res) {
     try {
-      const thought = await Thoughts.findOneAndUpdate({
+      const thought = await Thought.findOneAndUpdate({
         _id: req.params.thoughtId,
       });
       if (!thought) {
@@ -60,7 +60,7 @@ module.exports = {
   // DELETE to remove a thought by its _id
   async deleteThought(req, res) {
     try {
-      const thought = await Thoughts.findOneAndDelete({
+      const thought = await Thought.findOneAndDelete({
         _id: req.params.thoughtId,
       });
       if (!thought) {
