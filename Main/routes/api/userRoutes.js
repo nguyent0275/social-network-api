@@ -9,17 +9,13 @@ const {
 
 // /api/user
 // setting up the base route for user, which has a get and post method
-router
-    .route("/")
-    .get(getUsers)
-    .post(createUser);
+router.route("/").get(getUsers).post(createUser);
 
 // api/user/userId
 // setting up the id routes for user, which has a get, put, and delete method (these require an id)
-router
-    .route("/:userId")
-    .get(getSingleUser)
-    .put(updateUser)
-    .delete(deleteUser);
+router.route("/:userId").get(getSingleUser).put(updateUser).delete(deleteUser);
 
+// api/user/:userId/friends/:friendId
+// setting up a route for adding and deleteing a friend to a user by specifying the parent (userId) and the child (friendId)
+router.route("/:userId/friends/:friendId").post(addFriend).delete(deleteFriend);
 module.exports = router;
