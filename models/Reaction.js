@@ -3,6 +3,7 @@ const { Schema, Types } = require("mongoose");
 // schema for reactions, not a real model
 const reactionSchema = new Schema(
   {
+    // saved as _id
     reactionId: {
       // Use Mongoose's ObjectId data type
       // Default value is set to a new ObjectId

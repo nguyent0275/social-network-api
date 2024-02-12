@@ -1,3 +1,4 @@
+// imports
 const router = require("express").Router();
 const {
   getUsers,
@@ -18,6 +19,6 @@ router.route("/").get(getUsers).post(createUser);
 router.route("/:userId").get(getSingleUser).put(updateUser).delete(deleteUser);
 
 // api/user/:userId/friends/:friendId
-// setting up a route for adding and deleteing a friend to a user by specifying the parent (userId) and the child (friendId)
+// setting up a route for adding and deleting a friend to a user by specifying the parent (userId) and the child (friendId)
 router.route("/:userId/friends/:friendId").post(addFriend).delete(deleteFriend);
 module.exports = router;

@@ -15,7 +15,7 @@ const users = [
 connection.once("open", async () => {
   console.log("Connected to server");
 
-  // deletes any existing users
+  // deletes any existing users and thoughts
   await User.deleteMany({});
   await Thought.deleteMany({});
 
