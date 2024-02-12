@@ -1,5 +1,7 @@
+// imports
 const { Schema, model } = require("mongoose");
 
+// function for checking for emails
 var validateEmail = function (email) {
   // using regex to validate email inputs
   var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -61,6 +63,7 @@ userSchema.virtual('friendCount').get(function(){
   return this.friends.length
 })
 
+// creates a model using the userSchema
 const User = model("user", userSchema);
 
 module.exports = User;

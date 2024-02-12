@@ -1,19 +1,21 @@
 const router = require("express").Router();
-// imporitng all the controllers
+// importing all the controllers
 const {
   getThoughts,
   getSingleThought,
   createThought,
   updateThought,
   deleteThought,
-} = require("../../controllers/thoughtsController.js");
+  addReaction,
+  deleteReaction,
+} = require("../../controllers/thoughtController.js");
 
 // setting up the base route for thoughts, which has a get and post method
 router.route("/").get(getThoughts).post(createThought);
 
 // setting up the id routes for thoughts, which has a get, put, and delete method (these require an id)
 router
-  .route("/thoughtId")
+  .route("/:thoughtId")
   .get(getSingleThought)
   .put(updateThought)
   .delete(deleteThought);

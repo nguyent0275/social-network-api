@@ -1,5 +1,6 @@
 const { Schema, Types } = require("mongoose");
 
+// schema for reactions, not a real model
 const reactionSchema = new Schema(
   {
     reactionId: {
