@@ -15,7 +15,7 @@ const reactionSchema = new Schema(
       // 280 character maximum
       type: String,
       required: true,
-      minlength: 280,
+      maxlength: 280,
     },
     username: {
       type: String,
@@ -26,12 +26,6 @@ const reactionSchema = new Schema(
       default: Date.now,
     },
   },
-  {
-    toJSON: {
-        getters: true,
-    },
-    id: false
-  }
 );
 
 module.exports = reactionSchema;

@@ -17,6 +17,7 @@ connection.once("open", async () => {
 
   // deletes any existing users
   await User.deleteMany({});
+  await Thought.deleteMany({});
 
   // adds the array to the database
   await User.collection.insertMany(users);

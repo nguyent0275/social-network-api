@@ -24,6 +24,6 @@ router
 router.route("/:thoughtId/reactions").post(addReaction);
 
 // router for deleting a reaction by specifying the parent (thoughtId) and the child (reactionId)
-router.route("/:thoughtId/reactions:reactionId").delete(deleteReaction);
+router.route("/:thoughtId/reactions/:reactionId").delete(deleteReaction);
 
 module.exports = router;
