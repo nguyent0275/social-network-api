@@ -75,7 +75,7 @@ My email is nguyentoan0275@gmail.com, please feel free to send me an email with 
 A link to the [Video](https://www.youtube.com/watch?v=pJiMb1ZDbV4):
 
 ```
-https://www.youtube.com/watch?v=zdKeyUkhgSc
+https://www.youtube.com/watch?v=pJiMb1ZDbV4
 ```
 
 A link to the [repository](https://github.com/nguyent0275/social-network-api):
