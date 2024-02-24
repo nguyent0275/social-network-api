@@ -70,9 +70,9 @@ My email is nguyentoan0275@gmail.com, please feel free to send me an email with 
 
 ## Links
 
-![Postman Routes](/Develop/assets/images/postman-routes.png)
+![Postman Routes](/assets/images/postman-routes.png)
 
-A link to the [Video](https://www.youtube.com/watch?v=zdKeyUkhgSc):
+A link to the [Video](https://www.youtube.com/watch?v=pJiMb1ZDbV4):
 
 ```
 https://www.youtube.com/watch?v=zdKeyUkhgSc
